@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <title>About</title>
+   <link rel="stylesheet" href="aboutstyle.css">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="appbar/css/bootstrap.min.css">
+    <!-- Owl Carousel min css -->
+    <link rel="stylesheet" href="appbar/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="appbar/css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="appbar/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="appbar/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="appbar/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="appbar/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="appbar/css/custom.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <style>
+      .Container{
+    max-width:1170px;
+    margin:auto;
+}
+.footer{
+    background:#01142c;
+    padding: 70px 0;
+
+}
+.footer-row{
+    display:flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color:#fff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #ffc500;
+    height:2px;
+    box-sizing: border-box;
+    width:50px;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-decoration: none;
+    color:#bbbbbb;
+    display:block;
+    transition:all .3s ease;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+    padding-left:6px;
+
+}
+.footer-col .social-link a{
+    display:inline-block;
+    height:40px;
+    width:40px;
+    background: rgba(255,255,255,.2);
+    margin:0 10px 10 0px;
+    text-align: center;
+    line-height:40px;
+    border-radius:50%;
+    color:#fff;
+    transition: all .5s ease;
+
+}
+.footer-col .social-link a:hover{
+    color:#24262b;
+    background:#fff;
+
+}
+.footer-row2{
+    color:#fff;
+    padding-top: 20px;
+    padding-bottom: -2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media(max-width:767px){
+    .footer-col{
+        width:50%;
+        margin-bottom:30px;
+
+    }
+    
+}
+@media(max-width:567px){
+    .footer-col{
+        width:50%;
+    }
+    
+}
+    </style>
+</head>
+
+          <!-- Body main wrapper start -->
+          <nav>
+            <div class="wrapper" style="background-color: #01142c;color:white">
+                <!-- Start Header Style -->
+                <header id="htc__header" class="htc__header__area header--one">
+                    <!-- Start Mainmenu Area -->
+                    <div id="sticky-header-with-topbar" class="mainmenu__wrap">
+                        <div class="container">
+                            <div class="row">
+                                <div class="menumenu__container clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
+                                        <div class="logo">
+                                             <a href="homepage.php"><img src="appbar/images/navlogo.png" alt="logo images"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-8 col-sm-5 col-xs-3">
+                                        <nav class="main__menu__nav hidden-xs hidden-sm" >
+                                            <ul class="main__menu" >
+                                                <li class="drop"><a href="homepage.php" style="color:white">Home</a></li>
+                                                <li class="drop" ><a href="aboutpage.html" style="color:white">About us</a>
+                                                   
+                                                      
+                                                </li>
+                                                <li class="drop"><a href="index.php" style="color:white">Product</a>
+                                                   
+                                                </li>
+                                               
+                                                <li class="drop"><a href="#" style="color:white">Pages</a>
+                                                    <ul class="dropdown">
+                                                        <li><a href="cart.php">Cart page</a></li>
+                                                        <li><a href="cart.php">checkout</a></li>
+                                                        <li><a href="contactus.html">contact</a></li>
+                                                        <li><a href="index.php">product</a></li>
+                                                        <li><a href="wishlist.php">wishlist</a></li>
+                                                    </ul>
+                                                </li>
+                                               
+                                        </nav>
+        
+                                        <div class="mobile-menu clearfix visible-xs visible-sm" style="color:white">
+                                            <nav id="mobile_dropdown"style="color:white" >
+                                                <ul style="color:white">
+                                                    <li><a href="homepage.php" style="color:white">Home</a></li>
+                                                   
+                                                    <li><a href="#" style="color:white">pages</a>
+                                                        <ul>
+                                                           
+                                                            <li><a href="cart.html" style="color:white">Cart page</a></li>
+                                                            <li><a href="checkout.html" style="color:white">checkout</a></li>
+                                                            <li><a href="contactus.html" style="color:white">contact</a></li>
+                                                            <li><a href="index.php" style="color:white">product</a></li>
+                                                      
+                                                            <li><a href="wishlist.php" style="color:white">wishlist</a></li>
+                                                        </ul>
+                                                    </li>
+                                                   
+                                            </nav>
+                                        </div>  
+                                    </div>
+                                    <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
+                                        <div class="header__right">
+                                            <div class="header__search search search__open">
+                                                <a href="#" style="color:white"><i class="icon-magnifier icons" style="color:white"></i></a>
+                                            </div>
+                                            <div class="header__account">
+                                                <a href="wishlist.php" style="color:white"><i class="icon-heart icons" style="color:white"></i></a>
+                                            </div>
+                                            <div class="header__account">
+                                                <a href="login_new.html" style="color:white"><i class="icon-user icons" style="color:white"></i></a>
+                                            </div>
+                                            <div class="htc__shopping__cart">
+                                                <a class="cart__menu" href="cart.php" style="color:white"><i class="icon-handbag icons" style="color:white"></i></a>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-menu-area" style="color:white"></div>
+                        </div>
+                    </div>
+                    <!-- End Mainmenu Area -->
+                </header>
+                <!-- End Header Area -->
+                
+                <!--<div class="body__overlay"></div>-->
+                <!-- Start Offset Wrapper -->
+                <div class="offset__wrapper">
+                    <!-- Start Search Popap -->
+                    <div class="search__area">
+                        <div class="container" >
+                            <div class="row" >
+                                <div class="col-md-12" >
+                                    <div class="search__inner">
+                                        <form action="index.php" method="get">
+                                            <input placeholder="Search here... " type="text">
+                                            <button type="submit"></button>
+                                        </form>
+                                        <div class="search__close__btn">
+                                            <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Search Popap -->
+                </nav>
+      
+        
+              <!-- jquery latest version -->
+        <script src="homepagejs/js/vendor/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap framework js -->
+        <script src="homepagejs/js/bootstrap.min.js"></script>
+        <!-- All js plugins included in this file. -->
+        <script src="homepagejs/js/plugins.js"></script>
+        <script src="homepagejs/js/slick.min.js"></script>
+        <script src="homepagejs/js/owl.carousel.min.js"></script>
+        <!-- Waypoints.min.js. -->
+        <script src="homepagejs/js/waypoints.min.js"></script>
+        <!-- Main js file that contents all jQuery plugins activation. -->
+        <script src="homepagejs/js/main.js"></script>
+  <body>
+   <section class="about">
+     <div class="main">
+	 <img src="appbar/images/img1.jpg">
+    
+	 <div class= "about-text">
+	 <h1>About Us:</h1>
+	 <h5><marquee scrollamount="15">"ALL FOR THE SAKE OF YOUR BEAUTY"</marquee></h5>
+	 <h3> What product do you have?</h3>
+
+      <h2>Every single ingredient you put on you skin is 
+          informative, every ingredient contains messages 
+          that communicate to every single cell in your 
+          skin.
+      </h2>
+       
+	
+		<div class="btn-container">
+	
+	 <a href="knowmore.html"><button>Know More</button></a>
+	 </div>
+	 </div>
+</section>
+<footer>
+   <div class="footer">
+      <div class="Container">
+          <div class="footer-row">
+              <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                      <li><a href="aboutpage.html">ABOUT US</a></li>
+                      <li><a href="contactus.html">CONTACT US</a></li>
+                      <li><a href="Feedback Form.html">FEEDBACK</a></li>
+                      <li><a href="index.php">ALL PRODUCT</a></li>
+                      <li><a href="FAQ.html">FAQ</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer-col">
+                  <h4>Legal</h4>
+                  <ul>
+                      <li><a href="#">PRIVACY NOTICE</a></li>
+                      <li><a href="#">ACCESSIBILITY</a></li>
+                      <li><a href="#">COOKIE NOTICE</a></li>
+                      <li><a href="deliverypanel/deliverymanlogin.html">DELIVERY LOGIN</a></li>
+                      <li><a href="adminpanel/adminlogin.html">ADMIN LOGIN</a></li>
+                  </ul>
+              </div>
+
+              <div class="footer-col">
+                  <h4>Online shop</h4>
+                  <ul>
+                      <li><a href="index.php">FACE WASH</a></li>
+                      <li><a href="index.php">FACE CREAM</a></li>
+                      <li><a href="index.php">TONER</a></li>
+                      <li><a href="index.php">MOISTURIZER</a></li>
+                  </ul>
+              </div>
+
+              <div class="footer-col">
+                  <h4>Follow us</h4>
+                 <div class="social-link">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+               </div>
+              </div>
+              
+
+
+          </div>
+      
+      </div>
+      <hr>
+      <div class="footer-row2">
+        <p><center>Copyright @2023 Face Heaven (M05 MCA)</center></p>
+         
+
+      </div>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
+

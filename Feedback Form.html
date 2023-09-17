@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FEEDBACK FORM </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="appbar/css/bootstrap.min.css">
+    <!-- Owl Carousel min css -->
+    <link rel="stylesheet" href="appbar/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="appbar/css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="appbar/css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="appbar/css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="appbar/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="appbar/css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="appbar/css/custom.css">
+
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <style>
+        body{
+            background-color: #01142c;
+        }
+        
+    div.formContainer {
+            margin: 4em auto 4em auto;
+            width: 80%;
+            color: white;
+            border: 1px solid lightblue;
+            border-radius: 2px;
+            background-image:linear-gradient(rgb(138, 99, 99), rgb(116,205,235));
+        }
+        
+        div.heading {
+            margin: 0 auto 0 auto;
+            width: 100%;
+            padding: 1em 0 1em 0;
+            letter-spacing: 0.1em;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 1px solid black;
+            text-align: center;
+            background-color:lightblue;
+            color: black;
+        }
+        
+        div.description {
+            padding: 1em 0 1em 0;
+            width: 80%;
+            margin: 0 auto 0 auto;
+            text-align: center;
+            font-style: italic;
+            font-size: 30px;
+            padding-top: 2px;
+        }
+        
+        div.form {
+            margin: 0 auto 0 auto;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+        
+        div.form form {
+            margin: 0 auto 0 auto;
+            width: 80%;
+            padding:10px;
+        }
+        
+        div.form label {
+            display: block;
+            width: 80%;
+            margin: 1em auto 1em auto;
+            outline: none;
+            color: lightblue;
+            font-weight: bolder;
+            letter-spacing: 0.1;
+        }
+        
+        div.form input {
+            display: block;
+            width: 80%;
+            margin: 1em auto 1em auto;
+            outline: none;
+            color:black;
+            padding: 1.2em 0 1em 1.2em;
+            background-color:lightblue;
+            border: 0.5px solid lightblue;
+        }
+        
+        div.form textarea {
+            display: block;
+            width: 80%;
+            margin: 1em auto 1em auto;
+            outline: none;
+            color:black;
+            padding: 1.2em 0 1em 1.2em;
+            background-color:lightblue;
+            border: 0.5px solid lightblue;
+            height: 8em;
+            resize: none;
+        }
+        
+        div.form button {
+            outline: none;
+            margin: 2em auto 2em auto;
+            padding: 2em;
+            cursor: pointer;
+            border: none;
+            display: block;
+            width: 60%;
+            text-align: center;
+            border: 1px solid lightblue;
+        }
+        
+        div.form input:active,
+        div.form input:focus,
+        div.form select:active,
+        div.form select:focus,
+        div.form textarea:active,
+        div.form textarea:focus,
+        div.form button:active,
+        div.form button:hover {
+            box-shadow: 0 0 2px 2px white;
+        }
+        
+        div.form button {
+            background-color:#01142c;
+            color:white;
+            font-weight: bolder;
+            font-size:10px
+           
+        }
+        
+        @keyframes status {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        div.statusActive {
+            display: block;
+            width: 80%;
+            margin: 1em auto 1em auto;
+            padding: 1.2em 0 1em 1.2em;
+            background-color:black;
+            color: black;
+            text-align: center;
+            animation-name: status;
+            animation-duration: 0.3s;
+            transition: all 0.2s linear;
+        }
+        
+        div.loadingActive {
+            width: 90%;
+            margin: 4em auto 4em auto;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+            display: grid;
+            transition: all linear 0.2s;
+        }
+        
+        div.loadingActive div {
+            padding: 0.5em;
+            background-color: black;
+            animation-name: rotatingDiv;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes rotatingDiv {
+            from {
+                transform: rotate(-180deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media only screen and (min-width: 1224px) {
+            div.formContainer {
+                width: 500px;
+            }
+        }
+        
+        @media only screen and (min-width: 1824px) {
+            div.formContainer {
+                width: 500px;
+            }
+        }
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            div.formContainer {
+                width: 80%;
+            }
+        }
+
+
+        .Container{
+    max-width:1170px;
+    margin:auto;
+}
+.footer{
+    background:#01142c;
+    padding: 70px 0;
+
+}
+.footer-row{
+    display:flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color:#fff;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #ffc500;
+    height:2px;
+    box-sizing: border-box;
+    width:50px;
+}
+.footer-col ul{
+    list-style: none;
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-decoration: none;
+    color:#bbbbbb;
+    display:block;
+    transition:all .3s ease;
+}
+.footer-col ul li a:hover{
+    color:#fff;
+    padding-left:6px;
+
+}
+.footer-col .social-link a{
+    display:inline-block;
+    height:40px;
+    width:40px;
+    background: rgba(255,255,255,.2);
+    margin:0 10px 10 0px;
+    text-align: center;
+    line-height:40px;
+    border-radius:50%;
+    color:#fff;
+    transition: all .5s ease;
+
+}
+.footer-col .social-link a:hover{
+    color:#24262b;
+    background:#fff;
+
+}
+.footer-row2{
+    color:#fff;
+    padding-top: 20px;
+    padding-bottom: -2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media(max-width:767px){
+    .footer-col{
+        width:50%;
+        margin-bottom:30px;
+
+    }
+    
+}
+@media(max-width:567px){
+    .footer-col{
+        width:50%;
+    }
+    
+}
+
+
+        
+    </style>
+
+
+</head>
+
+    <nav>
+        <div class="wrapper" style="background-color: #01142c;color:white">
+            <!-- Start Header Style -->
+            <header id="htc__header" class="htc__header__area header--one">
+                <!-- Start Mainmenu Area -->
+                <div id="sticky-header-with-topbar" class="mainmenu__wrap ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="menumenu__container clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5"> 
+                                    <div class="logo">
+                                         <a href="homepage.php"><img src="appbar/images/navlogo.png" alt="logo images"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-8 col-sm-5 col-xs-3">
+                                    <nav class="main__menu__nav hidden-xs hidden-sm" >
+                                        <ul class="main__menu" >
+                                            <li class="drop"><a href="homepage.php" style="color:white">Home</a></li>
+                                            <li class="drop" ><a href="aboutpage.html" style="color:white">About us</a>
+                                               
+                                                  
+                                            </li>
+                                            <li class="drop"><a href="index.php" style="color:white">Product</a>
+                                               
+                                            </li>
+                                           
+                                            <li class="drop"><a href="#" style="color:white">Pages</a>
+                                                <ul class="dropdown">
+                                                    <li><a href="cart.php">Cart page</a></li>
+                                                    <li><a href="cart.php">checkout</a></li>
+                                                    <li><a href="contactus.html">contact</a></li>
+                                                    <li><a href="index.php">product</a></li>
+                                                    <li><a href="wishlist.php">wishlist</a></li>
+                                                </ul>
+                                            </li>
+                                           
+                                        </ul>
+                                    </nav>
+    
+                                    <div class="mobile-menu clearfix visible-xs visible-sm" style="color:white">
+                                        <nav id="mobile_dropdown"style="color:white" >
+                                            <ul style="color:white">
+                                                <li><a href="homepage.php" style="color:white">Home</a></li>
+                                                
+                                                <li><a href="#" style="color:white">pages</a>
+                                                    <ul>
+                                                       
+                                                        <li><a href="cart.php" style="color:white">Cart page</a></li>
+                                                        <li><a href="cart.php" style="color:white">checkout</a></li>
+                                                        <li><a href="contactus.html" style="color:white">contact</a></li>
+                                                        <li><a href="index.php" style="color:white">product</a></li>
+                                                  
+                                                        <li><a href="wishlist.php" style="color:white">wishlist</a></li>
+                                                    </ul>
+                                                </li>
+                                               
+                                         
+                                        </nav>
+                                    </div>  
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
+                                    <div class="header__right">
+                                        <div class="header__search search search__open">
+                                            <a href="#" style="color:white"><i class="icon-magnifier icons" style="color:white"></i></a>
+                                        </div>
+                                        <div class="header__account">
+                                            <a href="login_new.html" style="color:white"><i class="icon-user icons" style="color:white"></i></a>
+                                        </div>
+                                        <div class="header__account">
+                                            <a href="wishlist.php" style="color:white"><i class="icon-heart icons" style="color:white"></i></a>
+                                        </div>
+                                        <div class="htc__shopping__cart">
+                                            <a class="cart__menu" href="cart.php" style="color:white"><i class="icon-handbag icons" style="color:white"></i></a>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-menu-area" style="color:white"></div>
+                    </div>
+                </div>
+                <!-- End Mainmenu Area -->
+            </header>
+            <!-- End Header Area -->
+            
+            <!--<div class="body__overlay"></div>-->
+            <!-- Start Offset Wrapper -->
+            <div class="offset__wrapper">
+                <!-- Start Search Popap -->
+                <div class="search__area">
+                    <div class="container" >
+                        <div class="row" >
+                            <div class="col-md-12" >
+                                <div class="search__inner">
+                                    <form action="index.php" method="get">
+                                        <input placeholder="Search here... " type="text">
+                                        <button type="submit"></button>
+                                    </form>
+                                    <div class="search__close__btn">
+                                        <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Search Popap -->
+            </nav>
+  
+    
+          <!-- jquery latest version -->
+    <script src="homepagejs/js/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="homepagejs/js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="homepagejs/js/plugins.js"></script>
+    <script src="homepagejs/js/slick.min.js"></script>
+    <script src="homepagejs/js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="homepagejs/js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="homepagejs/js/main.js"></script>
+
+        
+
+
+<body>
+  
+        
+    <section class="feedback">
+    
+       <div class="formContainer">
+        <div class="heading">
+            FEEDBACK FORM 
+        </div>
+        <div class="description">
+            <p> WE APPRICIATE YOUR FEEDBACK!!</p>
+        </div>
+        <div class="form">
+            <form method="post" action="feedback.php" id="form">
+                <label for="name">Name</label>
+                <input name="name" type="text" id="name" required/>
+                <label for="email">Email</label>
+                <input name="email" type="email" id="email" required/>
+                <label for="feedback">Feedback</label>
+                <textarea name="message" id="message" required></textarea>
+                <button name="submit" type="submit">SUBMIT</button>
+            </form>
+        </div>
+
+      </div>
+      </section>
+      <footer>
+        <div class="footer">
+            <div class="Container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="aboutpage.html">ABOUT US</a></li>
+                            <li><a href="contactus.html">CONTACT US</a></li>
+                            <li><a href="Feedback Form.html">FEEDBACK</a></li>
+                            <li><a href="index.php">ALL PRODUCT</a></li>
+                            <li><a href="FAQ.html">FAQ</a></li>
+                        </ul>
+                     </div>
+    
+                     <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">PRIVACY NOTICE</a></li>
+                            <li><a href="#">ACCESSIBILITY</a></li>
+                            <li><a href="#">COOKIE NOTICE</a></li>
+                            <li><a href="deliverypanel/deliverymanlogin.html">DELIVERY LOGIN</a></li>
+                            <li><a href="adminpanel/adminlogin.html">ADMIN LOGIN</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Online shop</h4>
+                        <ul>
+                            <li><a href="index.php">FACE WASH</a></li>
+                            <li><a href="index.php">FACE CREAM</a></li>
+                            <li><a href="index.php">TONER</a></li>
+                            <li><a href="index.php">MOISTURIZER</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                       <div class="social-link">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                    </div>
+                    
+    
+    
+                </div>
+            
+            </div>
+            <hr>
+            <div class="footer-row2">
+              <p><center>Copyright @2023 Face Heaven (M05 MCA)</center></p>
+               
+    
+            </div>
+        </div>
+    
+      </footer>
+       </body>
+       </html>

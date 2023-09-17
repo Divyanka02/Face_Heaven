@@ -1,0 +1,93 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'josefin Sans', sans-serif;
+    box-sizing:border-box;
+    background-size:cover;
+   }
+   
+   .about{
+      width:100%;
+      padding: 78px 0px;
+     
+     background-color:#01142c;
+      
+  }
+  .about img{
+      height:auto;
+      width:440px;
+      box-shadow: 40px 40px lightblue;
+      
+  }
+  .about-text{
+      width:550px;
+      color:rgb(6, 150, 155);
+      text-shadow:2px 2px 4px black;
+      
+  }
+  .main{
+      width: 1130px;
+      max-width: 95%;
+      margin: 0 auto;
+      display: flex;
+      align-items:center;
+      justify-content:space-around;
+      
+  }
+  .about-text h1{
+      color:white;
+      font-size:80px;
+      text-transform: capitalize;
+      margin-bottom:20px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .about-text h5{
+      color:rgb(52, 72, 129);
+      font-size:25px;
+      text-transform: capitalize;
+      margin-bottom:25 px;
+      letter-spacing:2 px;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .about-text h3{
+      color:white;
+      letter-spacing:1px;
+      line-height:28px;
+      font-size: 30px;
+      margin-bottom:45px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+    .about-text h2{
+        color:white;
+        letter-spacing:1px;
+        line-height:35px;
+        font-size: 18px;
+        margin-bottom:45px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  button{
+       background:lightblue;
+       color:#01142c;
+       text-decoration:none;
+       border:2px solid transparent;
+       font-weight:bold;
+       padding:13px 30px;
+       border-radius:30px;
+       transition:.4s;
+  }
+  button:hover{
+       background:transparent;
+       color:white;
+       border:2px solid black;
+       cursor:pointer;
+  }
+  .btn-container{
+       height:100px;
+       width: 150px;
+  }
+  
+
+  
+ 
+  @media only screen and (max-width:600px){
+}

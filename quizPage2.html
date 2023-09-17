@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+  <title>quiz</title>
+
+</head>
+<style>
+    *{
+  box-sizing: border-box;
+}
+body{
+  background-color: white;
+ 
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container{
+  background-color:  #01142c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+ opacity: 0.9;
+}
+@media screen and (max-width: 1068px) {
+    .quiz-container{
+         width: 400px;
+    }
+}
+.quiz-header{
+  padding: 4rem;
+}
+h2{
+  padding: 0.5rem;
+  text-align: center;
+  margin: 0;
+  color:white;
+  word-spacing: 6px;
+}
+h3{
+  padding: 0.2rem;
+  text-align: center;
+  margin: 0;
+  color:white;
+  word-spacing: 2px;
+}
+h1{
+  padding: 0.2rem;
+  text-align: center;
+  margin: 0;
+  color:rgb(166,188,224);
+  word-spacing: 2px;
+}
+
+@media screen and (min-width: 600px) {
+    ol li{
+        margin-left:0;
+
+    }
+}
+
+ol li{
+
+ margin-left:30px;
+  color:white;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+ul li{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+ul li label{
+  cursor: pointer;
+  color:white;
+}
+.button2{
+  background-color:rgb(166,188,224);
+  color: #01142c;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 1rem;
+}
+.button2:hover{
+  background-color: rgb(5, 48, 139);
+  color:white;
+}
+
+.button3{
+  background-color:rgb(166,188,224);
+  color: #01142c;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 1rem;
+}
+.button3:hover{
+  background-color: rgb(5, 48, 139);
+  color:white;
+}
+.section1::before{
+  content: " ";
+  background-image: url(background1.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+  .section1::before{
+
+  background-repeat: repeat;
+    }
+}
+
+    .pick{
+        margin-left: 30px;
+        height: 200px;
+        width:300px;
+    }
+
+</style>
+
+<body>
+  <section class="section1">
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer">
+              <label for="a" id="a_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="b" class="answer">
+              <label for="b" id="b_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="c" class="answer">
+              <label for="c" id="c_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="d" class="answer">
+              <label for="d" id="d_text">Answer</label>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="button2" id="next" >Next</button>
+
+      </div>
+  </section>
+      <script>
+        const quizData = [
+    {
+        question: "Let's talk about pores. How would you describe yours?",
+        a: "Honestly, they're super noticeable, large, and all over my face.",
+        b: "They're noticeable, but only really in my t-zone (AKA, my forehead, nose, &amp; chin).",
+        c: "They're pretty small. I can hardly see them!",
+        d: "I'm pretty sure my pores are average in size.",
+     
+        correct5: "a",
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+       
+        
+    },
+    {
+        question: "Which phrase best describes your hair type?",
+        a: "It's oily.",
+        b: "It's a mix sometimes oily, sometimes dry.",
+        c: "It's dry.",
+        d: "I'm too busy worrying about my scalp to think about hair type! Hair products constantly irritate the top of my head.",
+     
+        correct5: "b",
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+       
+    },
+    {
+        question: "In one word, how would you describe your complexion?",
+        a: "Shiny.",
+        b: "Broken out.",
+        c: "Dull.",
+        d: "Red.",
+    
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "When you touch your face, how does it feel?",
+        a: "Slick and oily.",
+        b: "It depends on the area of my face - in some places it's rough. In others, it's moist.",
+        c: "A little scaly in places.",
+        d: "My skin feels normal when I touch it, but I know it's going to break out soon.",
+       
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "When your skin feels off, what always saves the day?",
+        a: "Blotting. I take a tissue to my forehead at least twice every day!",
+        b: "It depends. Sometimes I need to moisturize, but sometimes I need to dab the excess oil away.",
+        c: "Lotion, for sure. I carry it with me everywhere. If I don't, my skin gets super dry and uncomfortable.",
+        d: "I leave it alone. Lotion, cleanser, and even water can irritate my skin.",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "How does your skin usually feel after a cleanse?",
+        a: "Normal! Though I never feel like I fully wash the oiliness away.",
+        b: "My face feels fine, but there's a bit of tightness in my cheeks.",
+        c: "Dry, dry, dry. It's like the desert!",
+        d: "It stings a little, especially when I move my face. I might see some redness, too!",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "How often do you experience breakouts?",
+        a: "Constantly. It's so annoying.",
+        b: "I get them a lot, but usually just on my nose, chin, or forehead.",
+        c: "Almost never.",
+        d: "I only really get acne when I try out a new product.",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "If you could fix one thing about your skin, what would it be?",
+        a: "I'd clear my face of pimples forever!",
+        b: "I'd like a more consistent texture.",
+        c: "I'd do anything to get rid of flaky skin.",
+        d: "I feel like my face is always stinging or burning - I'd love for it to feel more comfortable!",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "Would you say you're prone to fine lines or wrinkles?",
+        a: "Nope. I've got less fine lines than most people my age.",
+        b: "I probably have an average amount.",
+        c: "Yes, definitely!",
+        d: "I haven't noticed - I'm way more concerned with my skin's constant redness and irritation!",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "You're looking through some flash photos. What do you notice about your face?",
+        a: "It's shiny! I wish I could dab my face through the photo.",
+        b: "There's definitely a little gleam there, but honestly, it doesn't look too bad.",
+        c: "My skin looks way better than it usually feels! There's no shine at all.",
+        d: "Oof. There are giant red patches right on my cheeks. I must've tried new makeup that day!",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "What skin product can't you live without?",
+        a: "Blotting papers.",
+        b: "Aromatic face oil.",
+        c: "Heavy - duty moisturizer.",
+        d: "Gentle facial cleanser.",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+    {
+        question: "Tons of different life factors can alter your skin type. Which of the answers below, applies most to you?",
+        a: "I'm under 30 years old - so I'm still dealing with tons of hormones.",
+        b: "I live in a hot humid area.",
+        c: "I do a lot of tanning and get UV exposure.",
+        d: "I have a diagnosed sensitive skin condition (like rosacea).",
+        
+        correct1: "a",
+        correct2: "b",
+        correct3: "c",
+        correct4: "d",
+        correct5: "b",
+    },
+];
+const quiz= document.getElementById('quiz')
+const answerEls = document.querySelectorAll('.answer')
+const questionEl = document.getElementById('question')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+const submitBtn = document.getElementById('next')
+let currentQuiz = 0
+let score = 0
+let type = 0
+loadQuiz()
+function loadQuiz() {
+    deselectAnswers()
+    const currentQuizData = quizData[currentQuiz]
+    questionEl.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
+}
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
+function getSelected() {
+    let answer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            answer = answerEl.id
+        }
+    })
+    return answer
+}
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    if(answer) {
+      if((answer === quizData[currentQuiz].correct5)){
+        score++
+        if(score >= 10)
+        {
+            type = "mixture of oily and dry skin"
+        }
+       }
+       if(answer === quizData[currentQuiz].correct1){
+        score++
+        if(score >= 10)
+        {
+            type = "Pass the blotting paper. You have oily skin!"
+        }
+       }
+       if(answer === quizData[currentQuiz].correct2){
+        score++
+        if(score >= 10)
+        {
+            type = "Dealing with dryness and oil? You have combination skin!"
+        }
+       }
+       if(answer === quizData[currentQuiz].correct3){
+        score++
+        if(score >= 10)
+        {
+            type = "Dealing with flaky tight skin on the regular? You've got dry skin!"
+        }
+       }
+       if(answer === quizData[currentQuiz].correct4){
+        score++
+        if(score >= 10)
+        {
+            type = "You have sensitive skin"
+        }
+       }
+       
+       currentQuiz++
+      
+
+       if(currentQuiz < quizData.length) {
+           loadQuiz()
+       } else {
+
+      
+       
+           quiz.innerHTML = `
+           <h2>We hope you answered all the questions correctly</h2>
+          
+            <h3>What skin type do I have?</h3> <br><h1> ${type} </h1>
+           
+            <br>
+           <button class="button2" onclick="location.reload()">Reload</button>
+           <button type="button" class="button3" onclick="window.location.href='homepage.php'">Back to Home Page</button>
+           `
+       
+       }
+    }
+})
+            
+      </script>
+    
+     
+        
+
+<!--<button class="button3" onclick="homepage.html">Back to Home Page</button>-->
+</body>
+</html>
